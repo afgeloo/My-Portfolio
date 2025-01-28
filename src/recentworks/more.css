@@ -1,0 +1,19 @@
+.circle1 {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%; 
+    background-color: #5F6266; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+}
+
+.recentsdesc {
+    font-size: 24px; 
+    color: #f8f9fa;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}

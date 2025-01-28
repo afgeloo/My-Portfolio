@@ -1,0 +1,25 @@
+.circle-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .circle-button:hover {
+    transform: scale(1.1);
+    background-color: #2980b9;
+  }
+  
+  .circle-button span {
+    font-weight: bold;
+  }
+  

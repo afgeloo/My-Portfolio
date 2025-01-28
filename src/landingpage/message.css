@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', sans-serif; 
+}
+
+.message {
+  color: #181b1e;
+  padding-left: 210px;
+  padding-top: 200px;
+  font-size: 60px;
+  overflow: visible;
+  position: absolute;
+  pointer-events: none; 
+
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.message1 {
+  color: #181b1e;
+  padding-left: 210px;
+  padding-top: 200px;
+  font-size: 60px;
+  pointer-events: none; 
+
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large screens (desktops and laptops) */
+@media (max-width: 1200px) {
+  .message {
+      padding-left: 150px;
+      padding-top: 150px;
+      font-size: 50px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .message {
+      padding-left: 100px;
+      padding-top: 120px;
+      font-size: 40px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .message {
+      padding-left: 50px;
+      padding-top: 80px;
+      font-size: 30px;
+      text-align: center; /* Center align for better mobile experience */
+  }
+}

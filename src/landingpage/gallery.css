@@ -1,0 +1,112 @@
+.gallery {
+    padding-top: 30px;
+  }
+  
+  /* Initial animation styles for images */
+  .pic1, .pic2, .pic3 {
+    opacity: 0;
+    transform: scale(0.9); /* Slightly scaled down */
+    transition: all 1s ease-out; /* Smooth animation */
+  }
+  
+  /* When the element is in the viewport */
+  .pic1.animate, .pic2.animate, .pic3.animate {
+    opacity: 1;
+    transform: scale(1); /* Back to original size */
+  }
+  
+  /* iOS-inspired frame styles for images */
+  .pic1 img, .pic2 img, .pic3 img {
+    border-radius: 20px; /* Smooth, rounded corners */
+    padding: 5px; /* Space between image and frame */
+    background: #f8f9fa; /* Light, neutral background for the frame */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Soft, subtle shadow */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth shadow and hover animation */
+  }
+  
+  /* Hover effect */
+  .pic1 img:hover, .pic2 img:hover, .pic3 img:hover {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  /* Existing styles for positions and sizes */
+  .pic1 {
+    margin-left: 35%;
+    width: fit-content;
+  }
+  
+  .pic1 img {
+    width: 270px;  
+    height: 230px; 
+  }
+  
+  .pic2 {
+    margin-top: 12%;
+    margin-left: 58%;
+    width: fit-content;
+  }
+  
+  .pic2 img {
+    width: 210px;  
+    height: 250px; 
+  }
+  
+  .pic3 {
+    margin-top: -160%;
+    margin-left: 150%;
+    width: fit-content;
+  }
+  
+  .pic3 img {
+    width: 220px;  
+    height: 270px;
+  }
+  
+  /* Responsive Design with Media Queries */
+  
+  /* Large screens (desktops and laptops) */
+  @media (max-width: 1200px) {
+    .pic1 {
+      margin-left: 30%;
+    }
+    .pic2 {
+      margin-left: 50%;
+      margin-top: 8%;
+    }
+    .pic3 {
+      margin-top: -140%;
+      margin-left: 120%;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .pic1 {
+      margin-left: 20%;
+    }
+    .pic2 {
+      margin-left: 40%;
+      margin-top: 5%;
+    }
+    .pic3 {
+      margin-top: -120%;
+      margin-left: 100%;
+    }
+  }
+  
+  /* Mobile devices */
+  @media (max-width: 480px) {
+    .pic1 {
+      margin-left: 10%;
+    }
+    .pic2 {
+      margin-left: 20%;
+      margin-top: 10%;
+    }
+    .pic3 {
+      margin-top: -100%;
+      margin-left: 50%;
+    }
+  }
+  

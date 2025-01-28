@@ -1,0 +1,106 @@
+.circle {
+    width: 400px;
+    height: 110px; 
+    border-radius: 80px; 
+    background-color: #181b1e; 
+    display: flex;
+    align-items: center;
+    margin-top: 110%;
+    margin-left: 100%;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for responsiveness */
+}
+
+.inner-circle {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    background-color: #f8f9fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    position: relative;
+    overflow: hidden; 
+}
+
+.inner-circle img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    animation: spin 20s linear infinite; 
+}
+
+.location {
+    padding-left: 15px;
+    font-size: 14px; 
+    color: #f8f9fa;
+}
+
+/* Animation to spin the globe */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large screens (desktops and laptops) */
+@media (max-width: 1200px) {
+    .circle {
+        width: 300px;
+        height: 90px;
+        margin-top: 100%;
+        margin-left: 90%;
+    }
+
+    .inner-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .location {
+        font-size: 12px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .circle {
+        width: 250px;
+        height: 80px;
+        margin-top: 90%;
+        margin-left: 80%;
+    }
+
+    .inner-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .location {
+        font-size: 10px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .circle {
+        width: 200px;
+        height: 70px;
+        margin-top: 80%;
+        margin-left: 70%;
+    }
+
+    .inner-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .location {
+        font-size: 9px;
+    }
+}

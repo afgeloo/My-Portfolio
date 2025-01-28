@@ -1,0 +1,43 @@
+
+body {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Roboto Slab'; 
+    overflow-x: hidden;
+}
+
+.profile-content {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.landing-section {
+    height: 100vh; 
+    padding: 20px;
+    display: flex;
+}
+
+.recentworks-section {
+    background-color: #f8f9fa; 
+    height: 100vh; 
+    padding: 20px;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .landing-section, .recentworks-section {
+        height: auto; 
+        padding: 40px 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-section, .recentworks-section {
+        height: auto; 
+        padding: 20px 15px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+    }
+}
