@@ -31,8 +31,8 @@ function Message() {
 
     return (
         <div>
-            <p className='message'>{currentWord}!</p>
-            <p className='message1'><br />I am Angelo</p>
+            <p className='message'>{currentWord},</p>
+            <p className='message1'><br />I am Angelo!</p>
         </div>
     );
 }

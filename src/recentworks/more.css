@@ -1,19 +1,38 @@
 .circle1 {
-    width: 180px; 
+    width: 180px;
     height: 180px;
-    border-radius: 50%; 
-    background-color: #5F6266; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    border-radius: 50%;
+    background-color: #5F6266; /* Initial color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensures the pseudo-element stays within the circle bounds */
+    transition: transform 0.1s ease; /* Smooth circle movement */
+}
+
+.circle1::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 90px;
+    background-color: #181B1E; /* Dark blue color */
+    transition: top 0.4s ease; /* Wave effect timing */
+    z-index: -1; /* Make sure the pseudo-element stays behind the text */
+}
+
+.circle1:hover::before {
+    top: 0; 
 }
 
 .recentsdesc {
-    font-size: 24px; 
+    font-size: 18px;
     color: #f8f9fa;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+    text-align: center;
+    pointer-events: none;
+    transition: transform 0.1s ease; /* Smooth text movement */
 }

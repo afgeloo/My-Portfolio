@@ -12,7 +12,7 @@ function Header() {
         const handleMouseMove = (e: MouseEvent, element: HTMLElement | null) => {
             if (!element) return;
 
-            const circleSize = 10; 
+            const circleSize = 10;  
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
