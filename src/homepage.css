@@ -4,6 +4,8 @@ body {
     padding: 0; 
     font-family: 'Roboto Slab'; 
     overflow-x: hidden;
+    background-color: #F2F3F6; 
+
 }
 
 .profile-content {
