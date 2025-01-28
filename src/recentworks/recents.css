@@ -90,6 +90,7 @@
     transform-origin: center;
     animation-duration: 0.3s;
     animation-fill-mode: forwards; /* Retain the final state of the animation */
+    
 }
 
 /* Add the scaleIn animation when hovering */
@@ -132,4 +133,50 @@
 .recentworks2:hover .description {
     transform: translateX(-10px); /* Move to the left */
     color: #a6a9ad; /* Faded color */
+}
+
+.view-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #5F6266;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.view-circle p {
+    color: #f8f9fa;
+    font-size: 14px;
+}
+
+/* Show the circle on hover */
+.recentworks2:hover .view-circle {
+    opacity: 1;
+}
+
+.recentworks2:hover .category1 {
+    transform: translateX(5px);
+    color: #a6a9ad;
+}
+
+.recentworks2:hover .category2 {
+    transform: translateX(5px);
+    color: #a6a9ad;
+}
+
+.recentworks2:hover .category3 {
+    transform: translateX(5px);
+    color: #a6a9ad;
+}
+
+.recentworks2:hover .description {
+    transform: translateX(-5px);
+    color: #a6a9ad;
 }
