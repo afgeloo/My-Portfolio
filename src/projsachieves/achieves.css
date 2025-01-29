@@ -8,7 +8,6 @@
     gap: 50px;
     animation: scrollRight linear infinite;
     animation-timing-function: linear;
-    animation-duration: 400s;
     will-change: transform;
   }
   
@@ -32,7 +31,7 @@
   /* Updated keyframes for scrolling right */
   @keyframes scrollRight {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
     100% {
       transform: translateX(0);
@@ -60,3 +59,10 @@
     pointer-events: none;
   }
   
+  .recentworks1 {
+    color: #5f6266;
+    font-size: 14px;
+    margin-left: 17.5%;
+    position: relative; /* Establish stacking context */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}

@@ -1,21 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import './projs.css';
 
 function Projs() {
   const galleryRef = useRef<HTMLDivElement>(null);
-  const [flippedIndex, setFlippedIndex] = useState<number | null>(null); // Track which card is flipped
+  const [scrollDuration, setScrollDuration] = useState<number>(400); // Adjust scroll duration dynamically
 
-  // Array of image paths and details
+  // Array of image paths (you can add up to 100 or more)
   const images = [
-    { src: "./src/assets/mypics/Pic11.jpg", description: "Project 11", link: "https://example.com/11" },
-    { src: "./src/assets/mypics/Pic10.jpg", description: "Project 10", link: "https://example.com/10" },
-    { src: "./src/assets/mypics/Pic9.jpg", description: "Project 9", link: "https://example.com/9" },
-    { src: "./src/assets/mypics/Pic5.jpg", description: "Project 5", link: "https://example.com/5" },
-    { src: "./src/assets/mypics/Pic4.jpg", description: "Project 4", link: "https://example.com/4" },
-    { src: "./src/assets/mypics/Pic3.jpg", description: "Project 3", link: "https://example.com/3" },
-    { src: "./src/assets/mypics/Pic2.jpg", description: "Project 2", link: "https://example.com/2" },
-    { src: "./src/assets/mypics/Pic1.jpg", description: "Project 1", link: "https://example.com/1" },
+    "./src/assets/mypics/Pic11.jpg",
+    "./src/assets/mypics/Pic10.jpg",
+    "./src/assets/mypics/Pic9.jpg",
+    "./src/assets/mypics/Pic5.jpg",
+    "./src/assets/mypics/Pic4.jpg",
+    "./src/assets/mypics/Pic3.jpg",
+    "./src/assets/mypics/Pic2.jpg",
+    "./src/assets/mypics/Pic1.jpg",
+    // Add more images here
   ];
 
   // Function to get the dominant color from an image
@@ -53,64 +53,54 @@ function Projs() {
     imageHolder.style.background = gradient;
   };
 
+  // Dynamically set the scroll duration based on the number of images
+  useEffect(() => {
+    const numImages = images.length;
+    const baseDuration = 200; // Base duration in seconds for 10 images
+
+    // Calculate the duration so that the speed is the same no matter the number of images
+    setScrollDuration(baseDuration * (numImages / 10));
+
+    const gallery = galleryRef.current;
+
+    if (gallery) {
+      const children = Array.from(gallery.children);
+
+      // Duplicate the slides to create an endless scrolling effect
+      children.forEach((child) => {
+        const clone = child.cloneNode(true);
+        gallery.appendChild(clone);
+      });
+
+      const imageHolders = Array.from(gallery.querySelectorAll('.image-holder1'));
+
+      imageHolders.forEach((imageHolder) => {
+        const img = imageHolder.querySelector('img') as HTMLImageElement;
+
+        if (img) {
+          img.onload = () => {
+            getDominantColor(img, (dominantColor) => {
+              applyGradientToImageHolder(imageHolder as HTMLElement, dominantColor);
+            });
+          };
+        }
+      });
+    }
+  }, [images.length]);
+
   return (
     <div className="gallery-container1">
-      <p className="projsachievesdesc">PROJECTS AND ACHIEVEMENTS</p>
-      <div className="gallery1" ref={galleryRef}>
+      <div className="gallery1" ref={galleryRef} style={{ animationDuration: `${scrollDuration}s` }}>
         {/* Dynamically render image holders */}
-        {images.concat(images).map((item, index) => ( // Duplicate images for infinite scroll effect
-          <motion.div
-            className="image-holder1"
-            key={index}
-            onClick={() => setFlippedIndex(index === flippedIndex ? null : index)}
-            style={{ perspective: "1000px" }} // Add perspective for the 3D effect
-          >
-            <AnimatePresence mode="wait">
-              {flippedIndex === index ? (
-                // Back Side
-                <motion.div
-                  className="card-back"
-                  initial={{ rotateY: -180 }}
-                  animate={{ rotateY: 0 }}
-                  exit={{ rotateY: 180 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <p>{item.description}</p>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    Visit Link
-                  </a>
-                </motion.div>
-              ) : (
-                // Front Side
-                <motion.div
-                  className="card-front"
-                  initial={{ rotateY: 180 }}
-                  animate={{ rotateY: 0 }}
-                  exit={{ rotateY: -180 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <img
-                    src={item.src}
-                    alt={`Gallery Image ${index + 1}`}
-                    onLoad={(e) => {
-                      const img = e.target as HTMLImageElement;
-                      getDominantColor(img, (dominantColor) => {
-                        const imageHolder = img.closest('.image-holder1');
-                        if (imageHolder) {
-                          applyGradientToImageHolder(imageHolder as HTMLElement, dominantColor);
-                        }
-                      });
-                    }}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+        {images.map((src, index) => (
+          <div className="image-holder1" key={index}>
+            <img src={src} alt={`Gallery Image ${index + 1}`} />
+          </div>
         ))}
       </div>
     </div>
   );
+  
 }
 
 export default Projs;

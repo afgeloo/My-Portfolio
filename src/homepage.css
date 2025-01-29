@@ -33,6 +33,13 @@ body {
     margin-top: 9%;
 }
 
+.expskills-section {
+    background-color: #f8f9fa; 
+    height: 100vh; 
+    display: flex;
+    margin-top: 2%;
+}
+
 @media (max-width: 768px) {
     .landing-section, .recentworks-section {
         height: auto; 

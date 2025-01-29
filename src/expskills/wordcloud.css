@@ -1,0 +1,100 @@
+.wordcloud-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Increased container height */
+  width: 90vh;  /* Increased container width */
+  position: relative;
+  margin-left: 20%; /* Adjusted to keep it centered */
+  overflow: hidden;
+}
+
+.wordcloud {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures full use of container space */
+  height: 100%; /* Ensures full use of container space */
+  z-index: 1;
+}
+
+.word {
+  font-size: calc(1.5rem + 1.5vw); /* Larger responsive font size */
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  animation: float 5s ease-in-out infinite, scale 5s ease-in-out infinite, switchWords 8s ease-in-out infinite;
+  color: #808080; /* grey color */
+  font-family: 'Arial', sans-serif;
+  will-change: transform, opacity; /* Improves performance */
+  animation-delay: calc(0.5s * var(--word-index)); /* Dynamic delay based on index */
+}
+
+.word:hover {
+  transform: scale(1.6); /* Increased hover scale */
+  color: rgba(100, 100, 100, 1); /* Darker grey on hover */
+}
+
+/* Floating and scaling animations */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-30px) translateX(30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation for switching words */
+@keyframes switchWords {
+  0%, 15% {
+    opacity: 0;
+  }
+  20%, 40% {
+    opacity: 1;
+  }
+  45%, 65% {
+    opacity: 0;
+  }
+  70%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cloud-shape {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}

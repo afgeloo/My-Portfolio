@@ -1,0 +1,10 @@
+.expdesc {
+    font-size: 14px;
+    color: #5f6266;
+    position: relative; /* Establish stacking context */
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    margin-left: 225px; /* Adjust margin-left as needed */
+    margin-bottom: 0; /* Remove unnecessary margin */
+    display: inline-block; /* Ensure the element stays inline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}

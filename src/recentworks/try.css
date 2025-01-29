@@ -1,21 +1,37 @@
-/* From Uiverse.io by adamgiebl */ 
-.neu-button {
-    background-color: #e0e0e0;
-    border-radius: 50px;
-    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-    color: #4d4d4d;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 15px 40px;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid rgb(206, 206, 206);
+
+
+.slider-container {
+  width: 100%; /* Full container width */
+  overflow: hidden; /* Hide slides outside the container */
+  background-color: #fff;
+  border: 2px solid #ddd;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.slide {
+  min-width: 200px; /* Width of each slide */
+  height: 150px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 10px; /* Space between slides */
+  border-radius: 8px;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-  
-  .neu-button:hover {
-    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+  to {
+    transform: translateX(-50%);
   }
-  
-  .neu-button:focus {
-    outline: none;
-    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-  }
+}

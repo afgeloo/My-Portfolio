@@ -56,7 +56,7 @@ function Achieves() {
   // Dynamically set the scroll duration based on the number of images
   useEffect(() => {
     const numImages = images.length;
-    const baseDuration = 200; // Base duration in seconds for 10 images
+    const baseDuration = 201; // Base duration in seconds for 10 images
 
     // Calculate the duration so that the speed is the same no matter the number of images
     setScrollDuration(baseDuration * (numImages / 10));

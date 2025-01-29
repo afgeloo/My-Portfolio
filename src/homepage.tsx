@@ -2,6 +2,7 @@ import './homepage.css';
 import Recentworks from './recentworks';
 import Landingpage from './landingpage';
 import Projsachieves from './projsachieves';
+import Expskills from './expskills';
 
 function Homepage() {
     return (
@@ -14,6 +15,9 @@ function Homepage() {
             </section>
             <section className="projsachieves-section">
                 <Projsachieves />
+            </section>
+            <section className="expskills-section">
+                <Expskills />
             </section>
         </div>
     );

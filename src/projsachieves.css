@@ -1,0 +1,9 @@
+.projsdesc{
+    font-size: 14px;
+    color: #5f6266;
+    margin-left: 1.6%;
+    margin-bottom: -1px;
+    position: relative; /* Establish stacking context */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+
+}
