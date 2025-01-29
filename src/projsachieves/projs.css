@@ -12,6 +12,15 @@
   will-change: transform;
 }
 
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .image-holder1 {
   width: 380px;
   height: 280px;
