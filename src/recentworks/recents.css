@@ -1,7 +1,7 @@
 .recentworks {
     color: #5f6266;
     font-size: 14px;
-    margin-left: 18.5%;
+    margin-left: 17.5%;
     position: relative; /* Establish stacking context */
     transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
 }
@@ -11,13 +11,13 @@
     align-items: center;
     position: relative; /* Establish stacking context */
     cursor: pointer;
-    margin-left: 18.5%;
+    margin-left: 17.5%;
     transition: color 0.3s ease; /* Transition for hover effect */
 }
 
 .category1 {
     margin-top: 60px;
-    margin-left: 43%;
+    margin-left: 48%;
     font-size: 20px;
     position: relative; /* Ensure the category is in the correct stacking context */
     transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
@@ -25,7 +25,7 @@
 
 .category2 {
     margin-top: 60px;
-    margin-left: 62%;
+    margin-left: 65.5%;
     font-size: 20px;
     position: relative; /* Ensure the category is in the correct stacking context */
     transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
@@ -33,7 +33,7 @@
 
 .category3 {
     margin-top: 60px;
-    margin-left: 40%;
+    margin-left: 45.5%;
     font-size: 20px;
     position: relative; /* Ensure the category is in the correct stacking context */
     transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
@@ -51,7 +51,7 @@
     height: 0.5px;
     background-color: #D0D1D4;
     margin-top: 20px;
-    margin-left: 18.5%;
+    margin-left: 17.5%;
     position: relative; /* Establish stacking context */
 }
 
@@ -133,27 +133,6 @@
 .recentworks2:hover .description {
     transform: translateX(-10px); /* Move to the left */
     color: #a6a9ad; /* Faded color */
-}
-
-.view-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #5F6266;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.view-circle p {
-    color: #f8f9fa;
-    font-size: 14px;
 }
 
 /* Show the circle on hover */

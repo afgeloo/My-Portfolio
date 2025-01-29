@@ -77,10 +77,7 @@ function Recents() {
                                     src={work.image}
                                     alt={`${work.title} preview`}
                                 />
-                                {/* Circle with 'View' text */}
-                                <div className="view-circle">
-                                    <p>View</p>
-                                </div>
+                                
                             </div>
                         )}
                     </div>

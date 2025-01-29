@@ -4,7 +4,7 @@ body {
     padding: 0; 
     font-family: 'Roboto Slab'; 
     overflow-x: hidden;
-    background-color: #F2F3F6; 
+    background-color: #f8f9fa; 
 
 }
 
@@ -21,9 +21,16 @@ body {
 
 .recentworks-section {
     background-color: #f8f9fa; 
-    height: 100vh; 
+    height: 103vh; 
     padding: 20px;
     display: flex;
+}
+
+.projsachieves-section {
+    background-color: #f8f9fa; 
+    height: 100vh; 
+    display: flex;
+    margin-top: 9%;
 }
 
 @media (max-width: 768px) {

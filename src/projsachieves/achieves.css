@@ -1,0 +1,61 @@
+.gallery-container2 {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .gallery2 {
+    display: flex;
+    gap: 50px;
+    animation: scrollRight linear infinite;
+    animation-timing-function: linear;
+    will-change: transform;
+  }
+  
+  .image-holder2 {
+    position: relative;
+    width: 380px;
+    height: 280px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-holder2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Updated keyframes for scrolling right */
+  @keyframes scrollRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply the zoom effect and box shadow to the whole image-holder2 */
+  .image-holder2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery2:hover {
+    animation-play-state: paused;
+  }
+  
+  .gallery-container2::before,
+  .gallery-container2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
