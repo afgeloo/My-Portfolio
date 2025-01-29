@@ -20,7 +20,6 @@
     border-radius: 90px;
     background-color: #181B1E; /* Dark blue color */
     left: -100%; /* Start fully off-screen */
-    z-index: -1; /* Ensure it stays behind other content */
     transition: none; /* No animation initially */
 }
 

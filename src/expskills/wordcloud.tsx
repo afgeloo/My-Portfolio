@@ -1,5 +1,6 @@
 import React from 'react';
 import './wordcloud.css';
+import Resume from './resume';
 
 function Wordcloud() {
   const words = [
@@ -8,6 +9,7 @@ function Wordcloud() {
   ];
 
   return (
+    <div className = "expskills-content">
     <div className="wordcloud-container">
       <div className="cloud-shape">
         <div className="wordcloud">
@@ -27,6 +29,11 @@ function Wordcloud() {
           ))}
         </div>
       </div>
+    </div>
+    <div className = "desc-resume">
+      <p className = "expdesc1">Proficient in effective engagement and aligning efforts with strategic goals, dedicated to bringing people together, sparking ideas, and making a real difference.</p>
+      <Resume />
+    </div>
     </div>
   );
 }

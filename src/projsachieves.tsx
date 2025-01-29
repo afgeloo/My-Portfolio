@@ -11,7 +11,7 @@ function Projsachieves(){
             <div className="projsachievesgallery">
                 <Projs />
                 <Achieves />
-            </div>
+            </div> 
         </div>
     );
 }

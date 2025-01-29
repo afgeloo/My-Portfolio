@@ -1,11 +1,28 @@
+.expskills-content {
+  display: flex;
+  /* Any other necessary styles for expskills-content */
+}
+
+.desc-resume {
+  margin-top: 2%;
+  margin-left: 50%;
+  margin-right: 10%;
+}
+
+.expdesc1{
+  margin-top: 6%;
+  font-size: 20px;
+  margin-left: 10%;
+}
+
 .wordcloud-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh; /* Increased container height */
   width: 90vh;  /* Increased container width */
-  position: relative;
-  margin-left: 20%; /* Adjusted to keep it centered */
+  position: absolute; /* Absolute positioning to isolate it from flex layout */
+  margin-left: 10%; /* Adjusted to keep it centered */
   overflow: hidden;
 }
 
@@ -92,7 +109,7 @@
 
 .cloud-shape {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 100%;

@@ -1,6 +1,6 @@
-.circle2 {
+.circle3 {
     margin-top: 5%;
-    margin-left: 51%;
+    margin-left: 9%;
     width: 180px;
     height: 70px; /* Capsule height */
     border-radius: 40px; /* Capsule shape */
@@ -13,6 +13,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+    z-index: 1; /* Ensure the pseudo-element stays behind the text */
 }
 
 /* Wave animation from the left */
@@ -36,7 +37,7 @@
 }
 
 /* Initial state for the wave */
-.circle2::before {
+.circle3::before {
     content: "";
     position: absolute;
     left: -100%; /* Start off-screen from the left */
@@ -44,26 +45,27 @@
     height: 100%;
     border-radius: 40px; /* Keep the capsule shape */
     background-color: #181b1e; /* Dark blue color */
+    z-index: -1; /* Keep pseudo-element behind text */
     animation: waveAnimationLeft 1s ease-out forwards; /* Start moving to the center */
 }
 
 /* Hover effect - wave stays centered */
-.circle2:hover::before {
+.circle3:hover::before {
     animation: waveAnimationLeft 0.6s ease-out forwards; /* Wave stays in the center */
 }
 
 /* After hover - wave moves to the right */
-.circle2:not(:hover)::before {
+.circle3:not(:hover)::before {
     animation: waveAnimationRight 0.6s ease-out forwards; /* Move wave to the right after unhover */
 }
 
 /* Text color transition */
-.circle2:hover .recentsdesc2 {
+.circle3:hover .recentsdesc3 {
     color: white; /* Change text color to white */
     transition: color 0.5s ease-in-out; /* Smooth text color transition */
 }
 
-.recentsdesc2 {
+.recentsdesc3 {
     font-size: 16px;
     color: #181b1e; /* Initial grey text color */
     text-align: center;
@@ -72,7 +74,7 @@
 }
 
 /* Initial load animation */
-.circle2,
-.circle2::before {
+.circle3,
+.circle3::before {
     animation: loadAnimation 0.1s ease-in-out forwards; /* Apply the same timing on reload */
 }

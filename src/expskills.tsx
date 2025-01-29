@@ -7,9 +7,9 @@ function Expskills(){
             <div>
                 <p className="expdesc">EXPERIENCES AND SKILLS</p>
             </div>
-            <div className="expskills">
-                <Wordcloud />
-            </div>
+                <div className="expskills">
+                    <Wordcloud />
+                </div>
         </div>
     );
 }
