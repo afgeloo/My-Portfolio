@@ -8,6 +8,7 @@
     gap: 50px;
     animation: scrollRight linear infinite;
     animation-timing-function: linear;
+    animation-duration: 400s;
     will-change: transform;
   }
   
