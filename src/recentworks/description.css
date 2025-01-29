@@ -1,3 +1,28 @@
-p{
-    font-size:32px;
-}
+/* Base styles */
+p {
+    font-size: 32px;
+    opacity: 0; /* Initially hide the elements */
+    transform: translateY(30px); /* Initially position them slightly below */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  /* For tablets */
+  @media (max-width: 768px) {
+    p {
+      font-size: 24px; /* Reduce font size for tablets */
+    }
+  }
+  
+  /* For phones */
+  @media (max-width: 480px) {
+    p {
+      font-size: 18px; /* Further reduce font size for phones */
+    }
+  }
+  
+  /* Animation for elements that are in view */
+  .p-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

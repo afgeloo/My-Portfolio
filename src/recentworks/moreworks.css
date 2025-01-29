@@ -76,3 +76,28 @@
 .circle2::before {
     animation: loadAnimation 0.1s ease-in-out forwards; /* Apply the same timing on reload */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .circle2 {
+        width: 150px;
+        height: 60px; /* Adjust height for smaller screens */
+        margin-left: 45%; /* Center the capsule for smaller screens */
+    }
+
+    .recentsdesc2 {
+        font-size: 14px; /* Adjust text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .circle2 {
+        width: 130px;
+        height: 50px; /* Further adjust for smaller screens */
+        margin-left: 40%; /* Keep it centered */
+    }
+
+    .recentsdesc2 {
+        font-size: 12px; /* Further adjust text size */
+    }
+}

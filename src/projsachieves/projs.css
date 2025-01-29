@@ -59,3 +59,29 @@
   pointer-events: none;
 }
 
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .gallery1 {
+    gap: 30px; /* Reduced gap between images */
+  }
+
+  .image-holder1 {
+    width: 270px; /* Adjust width for smaller screens */
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .gallery1 {
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; /* Reduce gap */
+  }
+
+  .image-holder1 {
+    width: 100%; /* Make images responsive to screen size */
+    height: 200px; /* Adjust height for mobile */
+  }
+}

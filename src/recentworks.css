@@ -1,12 +1,30 @@
 body {
-    margin: 0; 
-    padding: 0; 
-    font-family: 'Roboto Slab'; 
-  }
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Roboto Slab'; 
+}
 
 .recents {
-    display: flex;
-    padding-left: 210px;
-    padding-top: 30px;
-    gap: 190px;
+  display: flex;
+  padding-left: 210px;
+  padding-top: 30px;
+  gap: 190px;
+}
+
+/* Media query for medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .recents {
+    padding-left: 30px; /* Adjust padding for smaller screens */
+    padding-top: 20px;  /* Reduce top padding for better alignment */
+    gap: 100px;         /* Reduce gap between elements */
+  }
+}
+
+/* Media query for small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .recents {
+    padding-left: 15px; /* Adjust padding for even smaller screens */
+    padding-top: 15px;  /* Further reduce top padding */
+    gap: 50px;          /* Reduce gap even more */
+  }
 }

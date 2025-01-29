@@ -7,14 +7,13 @@ function Projs() {
 
   // Array of image paths (you can add up to 100 or more)
   const images = [
-    "./src/assets/mypics/Pic11.jpg",
-    "./src/assets/mypics/Pic10.jpg",
-    "./src/assets/mypics/Pic9.jpg",
-    "./src/assets/mypics/Pic5.jpg",
-    "./src/assets/mypics/Pic4.jpg",
-    "./src/assets/mypics/Pic3.jpg",
-    "./src/assets/mypics/Pic2.jpg",
-    "./src/assets/mypics/Pic1.jpg",
+    "./src/assets/recentworks/pharmaease.png",
+    "./src/assets/recentworks/ecarga.png",
+    "./src/assets/recentworks/finalinv.png",
+    "./src/assets/recentworks/matchspook.png",
+    "./src/assets/projs/pixelverse.png",
+    "./src/assets/projs/pmpixel.png",
+    "./src/assets/projs/speaker1.png",
     // Add more images here
   ];
 
@@ -56,7 +55,7 @@ function Projs() {
   // Dynamically set the scroll duration based on the number of images
   useEffect(() => {
     const numImages = images.length;
-    const baseDuration = 200; // Base duration in seconds for 10 images
+    const baseDuration = 400; // Base duration in seconds for 10 images
 
     // Calculate the duration so that the speed is the same no matter the number of images
     setScrollDuration(baseDuration * (numImages / 10));
@@ -94,7 +93,12 @@ function Projs() {
         {/* Dynamically render image holders */}
         {images.map((src, index) => (
           <div className="image-holder1" key={index}>
-            <img src={src} alt={`Gallery Image ${index + 1}`} />
+            <img 
+              src={src} 
+              alt={`Gallery Image ${index + 1}`} 
+              style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+            />
+
           </div>
         ))}
       </div>

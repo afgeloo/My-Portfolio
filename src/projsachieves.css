@@ -1,9 +1,24 @@
-.projsdesc{
+.projsdesc {
     font-size: 14px;
     color: #5f6266;
-    margin-left: 1.6%;
+    margin-left: 1.05%;
     margin-bottom: -1px;
-    position: relative; /* Establish stacking context */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
-
-}
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .projsdesc {
+      font-size: 12px; /* Adjust font size for medium-sized screens */
+      margin-left: 2%; /* Adjust margin for better spacing */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projsdesc {
+      font-size: 10px; /* Further reduce font size for smaller screens */
+      margin-left: 5%; /* Adjust margin for better spacing */
+    }
+  }
+  

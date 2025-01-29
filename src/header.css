@@ -7,12 +7,13 @@ body {
 header {
   display: flex;
   position: relative;
+  align-items: center; /* Vertically align items */
 }
 
 header img {
   height: 35px;
   width: auto;
-  margin-right: 950px;
+  margin-right: 78%; /* Remove the large margin-right */
   margin-left: 30px;
   padding-top: 10px;
   cursor: pointer;
@@ -91,23 +92,23 @@ header img:hover {
 @media (max-width: 768px) {
   header img {
     height: 40px;
-    margin-right: 50px;
+    margin-right: 10px; /* Adjust margin-right for smaller screens */
   }
 
   .headerfonts {
-    font-size: 16px;
-    padding-right: 50px;
+    font-size: 14px; /* Reduce font size for medium screens */
+    padding-right: 30px;
   }
 }
 
 @media (max-width: 480px) {
   header img {
     height: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .headerfonts {
-    font-size: 14px;
+    font-size: 12px; /* Further reduce font size for small screens */
     padding-right: 20px;
   }
 }

@@ -78,3 +78,28 @@
 .circle3::before {
     animation: loadAnimation 0.1s ease-in-out forwards; /* Apply the same timing on reload */
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .circle3 {
+        width: 150px; /* Reduce width for smaller screens */
+        height: 60px; /* Reduce height for smaller screens */
+        margin-left: 5%; /* Adjust margin */
+    }
+
+    .recentsdesc3 {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .circle3 {
+        width: 120px; /* Further reduce width for very small screens */
+        height: 50px; /* Further reduce height for very small screens */
+        margin-left: 3%; /* Adjust margin for smaller screens */
+    }
+
+    .recentsdesc3 {
+        font-size: 12px; /* Adjust text size for very small screens */
+    }
+}

@@ -2,160 +2,145 @@
     color: #5f6266;
     font-size: 14px;
     margin-left: 17.5%;
-    position: relative; /* Establish stacking context */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .recentworks2 {
     display: flex;
     align-items: center;
-    position: relative; /* Establish stacking context */
+    position: relative;
     cursor: pointer;
     margin-left: 17.5%;
-    transition: color 0.3s ease; /* Transition for hover effect */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Categories positioning */
+.category1, .category2, .category3, .category4 {
+    margin-top: 60px;
+    font-size: 20px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .category1 {
-    margin-top: 60px;
     margin-left: 48%;
-    font-size: 20px;
-    position: relative; /* Ensure the category is in the correct stacking context */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
 }
 
 .category2 {
-    margin-top: 60px;
     margin-left: 65.5%;
-    font-size: 20px;
-    position: relative; /* Ensure the category is in the correct stacking context */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
 }
 
-.category3 {
-    margin-top: 60px;
-    margin-left: 45.5%;
-    font-size: 20px;
-    position: relative; /* Ensure the category is in the correct stacking context */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+.category3, .category4 {
+    margin-left: 41%;
 }
 
+/* Description styling */
 .description {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 60px;
-    position: relative; /* Ensure the description is in the correct stacking context */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Line styling */
 .line {
     height: 0.5px;
     background-color: #D0D1D4;
     margin-top: 20px;
     margin-left: 17.5%;
-    position: relative; /* Establish stacking context */
+    position: relative;
 }
 
-/* Image Placeholder Styles */
-/* Animation Keyframes */
+/* Image Placeholder Styling */
 @keyframes scaleIn {
-    0% {
-        transform: scale(0); /* Start from small size */
-    }
-    100% {
-        transform: scale(1); /* Grow to full size */
-    }
+    0% { transform: scale(1); }
+    100% { transform: scale(1); }
 }
 
 @keyframes scaleOut {
-    0% {
-        transform: scale(1); /* Start from full size */
-    }
-    100% {
-        transform: scale(0); /* Shrink to small size */
-    }
+    0% { transform: scale(1); }
+    100% { transform: scale(1); }
 }
 
-/* Updated Image Placeholder Styles */
 .image-placeholder {
     position: absolute;
     width: 300px;
     height: 300px;
-    border-radius: 10px;
-    background: #f8f9fa;
-    padding: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-    pointer-events: none; /* Prevent interference with mouse events */
+    padding: 10px;
+    pointer-events: none;
     overflow: hidden;
-    z-index: 9999; /* Ensure it appears above all other elements */
-    transform-origin: center;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards; /* Retain the final state of the animation */
-    
-}
-
-/* Add the scaleIn animation when hovering */
-.image-placeholder.pop-in {
-    animation-name: scaleIn;
-}
-
-.image-placeholder.pop-out {
-    animation-name: scaleOut;
+    z-index: 9999;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.411), 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     object-fit: cover;
 }
 
-.image-placeholder:hover {
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-}
-
-/* Hover effects for .recentworks2 */
-.recentworks2:hover .category1 {
-    transform: translateX(10px); /* Move to the right */
-    color: #a6a9ad; /* Faded color */
-}
-
-.recentworks2:hover .category2 {
-    transform: translateX(10px); /* Move to the right */
-    color: #a6a9ad; /* Faded color */
-}
-
-.recentworks2:hover .category3 {
-    transform: translateX(10px); /* Move to the right */
-    color: #a6a9ad; /* Faded color */
-}
-
-.recentworks2:hover .description {
-    transform: translateX(-10px); /* Move to the left */
-    color: #a6a9ad; /* Faded color */
-}
-
-/* Show the circle on hover */
-.recentworks2:hover .view-circle {
-    opacity: 1;
-}
-
-.recentworks2:hover .category1 {
-    transform: translateX(5px);
-    color: #a6a9ad;
-}
-
-.recentworks2:hover .category2 {
-    transform: translateX(5px);
-    color: #a6a9ad;
-}
-
-.recentworks2:hover .category3 {
-    transform: translateX(5px);
+/* Hover effects */
+.recentworks2:hover .category1,
+.recentworks2:hover .category2,
+.recentworks2:hover .category3,
+.recentworks2:hover .category4 {
+    transform: translateX(10px);
     color: #a6a9ad;
 }
 
 .recentworks2:hover .description {
-    transform: translateX(-5px);
+    transform: translateX(-10px);
     color: #a6a9ad;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recentworks, .recentworks2 {
+        margin-left: 10%;
+    }
+
+    .category1, .category2, .category3, .category4 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 40px;
+    }
+
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+
+    .line {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .recentworks, .recentworks2 {
+        margin-left: 5%;
+    }
+
+    .category1, .category2, .category3, .category4 {
+        font-size: 16px;
+        margin-left: 5%;
+    }
+
+    .description {
+        font-size: 30px;
+    }
+
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .line {
+        margin-left: 5%;
+    }
 }

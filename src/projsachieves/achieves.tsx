@@ -7,14 +7,18 @@ function Achieves() {
 
   // Array of image paths (you can add up to 100 or more)
   const images = [
-    "./src/assets/mypics/Pic11.jpg",
-    "./src/assets/mypics/Pic10.jpg",
-    "./src/assets/mypics/Pic9.jpg",
-    "./src/assets/mypics/Pic5.jpg",
-    "./src/assets/mypics/Pic4.jpg",
-    "./src/assets/mypics/Pic3.jpg",
-    "./src/assets/mypics/Pic2.jpg",
-    "./src/assets/mypics/Pic1.jpg",
+    "./src/assets/achieves/1styeargwa.png",
+    "./src/assets/achieves/automata.png",
+    "./src/assets/achieves/datacamp.png",
+    "./src/assets/achieves/datacom.png",
+    "./src/assets/achieves/finalinvcert.png",
+    "./src/assets/achieves/mrcs.png",
+    "./src/assets/achieves/mrcs1.png",
+    "./src/assets/achieves/mrcs2.png",
+    "./src/assets/achieves/panel.png",
+    "./src/assets/achieves/secrecom.png",
+    "./src/assets/achieves/uplb.png",
+    "./src/assets/achieves/whigh.png",
     // Add more images here
   ];
 
@@ -94,7 +98,11 @@ function Achieves() {
         {/* Dynamically render image holders */}
         {images.map((src, index) => (
           <div className="image-holder2" key={index}>
-            <img src={src} alt={`Gallery Image ${index + 1}`} />
+            <img 
+              src={src} 
+              alt={`Gallery Image ${index + 1}`} 
+              style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+            />
           </div>
         ))}
       </div>

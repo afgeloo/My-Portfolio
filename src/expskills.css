@@ -9,4 +9,17 @@
     transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
 }
 
+/* Media query to adjust for smaller screens */
+@media (max-width: 768px) {
+    .expdesc {
+        font-size: 12px; /* Reduce font size for smaller screens */
+        margin-left: 20px; /* Adjust margin-left for smaller screens */
+    }
+}
 
+@media (max-width: 480px) {
+    .expdesc {
+        font-size: 10px; /* Further reduce font size for mobile */
+        margin-left: 10px; /* Further adjust margin-left for small screens */
+    }
+}

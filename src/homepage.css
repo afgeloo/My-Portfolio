@@ -21,16 +21,16 @@ body {
 
 .recentworks-section {
     background-color: #f8f9fa; 
-    height: 103vh; 
+    height: 145vh; 
     padding: 20px;
     display: flex;
+    margin-top: -3%;
 }
 
 .projsachieves-section {
     background-color: #f8f9fa; 
     height: 100vh; 
     display: flex;
-    margin-top: 9%;
 }
 
 .expskills-section {
